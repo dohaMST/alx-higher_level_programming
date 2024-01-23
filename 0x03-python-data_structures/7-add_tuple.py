@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+cat > #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     size_a, size_b = len(tuple_a), len(tuple_b)
     tupX = ((tuple_a[0] if size_a >= 1 else 0) +
