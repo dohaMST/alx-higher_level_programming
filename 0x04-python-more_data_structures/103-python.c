@@ -39,10 +39,10 @@ void print_python_list(PyObject *p)
         printf("[*] Allocated = %li\n", arr->allocated);
         for (a = 0; a < len; a++)
         {
-                type = (arr->ob_item[i])->ob_type->tp_name;
+                type = (arr->ob_item[a])->ob_type->tp_name;
 		printf("Element %i: %s\n", a, type);
                 if (!strcmp(type, "bytes"))
-                        print_python_bytes(arr->ob_item[i]);
+                        print_python_bytes(arr->ob_item[a]);
         }
 }
 
