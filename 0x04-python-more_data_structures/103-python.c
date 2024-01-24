@@ -23,7 +23,7 @@ void print_python_bytes(PyObject *p)
 	else
 		printf("  first 10 bytes:");
 	for (a = 0; a <= len && a < 10; a++)
-		printf(" %02hhx", trying_str[i]);
+		printf(" %02hhx", trying_str[a]);
 	printf("\n");
 }
 
