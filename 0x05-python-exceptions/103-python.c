@@ -1,12 +1,8 @@
 #include <Python.h>
 
-void print_python_list(PyObject *p);
-void print_python_bytes(PyObject *p);
-void print_python_float(PyObject *p);
-
 /**
- * print_python_list - Prints basic info about Python lists.
- * @p: A PyObject list object.
+ * print_python_list - a function tha prints info about Py lists
+ * @p: list object
  */
 void print_python_list(PyObject *p)
 {
@@ -42,8 +38,8 @@ void print_python_list(PyObject *p)
 }
 
 /**
- * print_python_bytes - Prints basic info about Python byte objects.
- * @p: A PyObject byte object.
+ * print_python_bytes - a function that prints info about Py byte objects
+ * @p: byte object
  */
 void print_python_bytes(PyObject *p)
 {
