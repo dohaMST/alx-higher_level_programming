@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Defining of classes"""
+"""Define classes for a singly-linked list."""
 
 
 class Node:
-    """Representation of a node"""
+    """Represent a node in a singly-linked list."""
 
     def __init__(self, data, next_node=None):
         self.data = data
@@ -32,6 +32,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Represent a singly-linked list."""
 
     def __init__(self):
         self.__head = None
