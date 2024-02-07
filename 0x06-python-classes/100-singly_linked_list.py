@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Define classes for a singly-linked list."""
+"""defining classes """
 
 
 class Node:
-    """Represent a node in a singly-linked list."""
+    """representation of a node"""
 
     def __init__(self, data, next_node=None):
         self.data = data
@@ -32,7 +32,7 @@ class Node:
 
 
 class SinglyLinkedList:
-    """Represent a singly-linked list."""
+    """representation of the class"""
 
     def __init__(self):
         self.__head = None
@@ -55,8 +55,8 @@ class SinglyLinkedList:
 
     def __str__(self):
         values = []
-        tmp = self.__head
-        while tmp is not None:
-            values.append(str(tmp.data))
-            tmp = tmp.next_node
+        x = self.__head
+        while x is not None:
+            values.append(str(x.data))
+            x = x.next_node
         return ('\n'.join(values))
