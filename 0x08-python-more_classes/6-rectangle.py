@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""defining the rectangle class"""
+"""Create a Rectangle class."""
 
 
 class Rectangle:
-    """representing the rectangle"""
+    """Rectangle(width, height)"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
@@ -55,4 +55,4 @@ class Rectangle:
     def __del__(self):
         """Print a message when the rectangle is deleted."""
         print("Bye rectangle...")
-        Rectangle.number_of_instances-= 1
+        Rectangle.number_of_instances -= 1
