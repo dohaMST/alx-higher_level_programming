@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Create a Rectangle class."""
+"""defining the rectangle class"""
 
 
 class Rectangle:
-    """Rectangle(width, height)"""
+    """representing the rectangle"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
