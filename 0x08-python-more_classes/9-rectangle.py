@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""defining the rectangle class"""
+"""Create a Rectangle class."""
 
 
 class Rectangle:
-    """representing the rectangle"""
+    """Rectangle(width, height)"""
     number_of_instances = 0
     print_symbol = "#"
 
@@ -52,12 +52,12 @@ class Rectangle:
     def __str__(self):
         if (self.width == 0 or self.height == 0):
             return ""
-        st = ""
+        string = ""
         for i in range(self.height):
-            st += (str(self.print_symbol) * self.width)
+            string += (str(self.print_symbol) * self.width)
             if i != self.__height - 1:
-                st += "\n"
-        return st
+                string += "\n"
+        return string
 
     def __repr__(self):
         """Print the rectangle using eval"""
@@ -69,11 +69,11 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
     @staticmethod
-    def bigger_or_equal(rect1, rect2):
-        if not isinstance(rect1, Rectangle):
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        elif not isinstance(rect2, Rectangle):
+        elif not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect1.area() >= rect2.area():
-            return rect1
-        return (rect2)
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return (rect_2)
