@@ -24,10 +24,10 @@ First import ``MyList class`` from the ``1-my_list.py`` module:
     >>> my_list.append(-5)
     >>> my_list.append(4)
     >>> my_list.append(0)
-    >>> my_list.append(-1)
+    >>> my_list.append(1)
     >>> my_list.append(5)
     >>> my_list.print_sorted()
-    [-5, -1, 0, 4, 5]
+    [-5, 0, 1, 4, 5]
 
 1 None arg:
     >>> my_list = MyList()
