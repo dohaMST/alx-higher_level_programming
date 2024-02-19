@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""return true or false"""
+""" Return true if the object is an instance of a class """
 
 
 def is_same_class(obj, a_class):
-    """'true' if the object is an instance of a class otherwise 'false'"""
-
+    """
+    Return true if the object is an instance of a class
+    """
     return type(obj) == a_class
