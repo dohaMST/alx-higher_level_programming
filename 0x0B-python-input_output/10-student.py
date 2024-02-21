@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Student Class"""
+"""defining the class"""
 
 
 class Student:
-    """class Student that defines a student by"""
+    """representing the class"""
 
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
@@ -13,9 +13,9 @@ class Student:
     def to_json(self, attrs=None):
         if (attrs is None):
             return (self.__dict__)
-        dic = dict()
-        for ele in attrs:
-            for key in self.__dict__:
-                if (ele == key):
-                    dic[ele] = self.__dict__[key]
-        return (dic)
+        x = dict()
+        for i in attrs:
+            for j in self.__dict__:
+                if (i == j):
+                    x[i] = self.__dict__[j]
+        return (x)
