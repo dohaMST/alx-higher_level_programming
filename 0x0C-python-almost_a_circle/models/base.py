@@ -130,7 +130,7 @@ class Base:
             turt.up()
             turt.goto(sq.x, sq.y)
             turt.down()
-            for _ in range(2):
+            for x in range(2):
                 turt.forward(sq.width)
                 turt.left(90)
                 turt.forward(sq.height)
