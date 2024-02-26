@@ -2,8 +2,7 @@
 """defining the class"""
 import json
 import csv
-import turtle
-import tkinter as TK
+#import turtle
 
 
 class Base:
