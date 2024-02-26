@@ -128,7 +128,6 @@ class Rectangle(Base):
                 elif key == "y":
                     self.y = val
 
-
     def to_dictionary(self):
         """representing the rectangle by dictionary"""
         return {
