@@ -137,3 +137,6 @@ class Rectangle(Base):
             "x": self.x,
             "y": self.y
         }
+
+if __name__ == "__main__":
+    pass
