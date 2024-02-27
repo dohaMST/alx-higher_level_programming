@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-'''Module for Base class.'''
+'''defining the class'''
 from json import dumps, loads
 import csv
 
 
 class Base:
-    '''A representation of the base of our OOP hierarchy.'''
+    '''representing the class'''
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        '''Constructor.'''
+        '''the constructor.'''
         if id is not None:
             self.id = id
         else:
@@ -19,7 +19,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        '''Jsonifies a dictionary so it's quite rightly and longer.'''
+        '''converting to json'''
         if list_dictionaries is None or not list_dictionaries:
             return "[]"
         else:
@@ -27,14 +27,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        '''Unjsonifies a dictionary.'''
+        '''convert to python dict'''
         if json_string is None or not json_string:
             return []
         return loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        '''Saves jsonified object to file.'''
+        '''save to json file'''
         if list_objs is not None:
             list_objs = [o.to_dictionary() for o in list_objs]
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
@@ -42,7 +42,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        '''Loads instance from dictionary.'''
+        '''loading instance'''
         from models.rectangle import Rectangle
         from models.square import Square
         if cls is Rectangle:
@@ -50,9 +50,9 @@ class Base:
         elif cls is Square:
             new = Square(1)
         else:
-            new = None
-        new.update(**dictionary)
-        return new
+            new_inst = None
+        new_inst.update(**dictionary)
+        return new_inst
 
     @classmethod
     def load_from_file(cls):
