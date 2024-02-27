@@ -1,15 +1,5 @@
 #!/usr/bin/python3
 """Defines unittests for base.py.
-
-Unittest classes:
-    TestBase_instantiation - line 21
-    TestBase_to_json_string - line 108
-    TestBase_save_to_file - line 154
-    TestBase_from_json_string - line 232
-    TestBase_create - line 286
-    TestBase_load_from_file - line 338
-    TestBase_save_to_file_csv - line 404
-    TestBase_load_from_file_csv - line 482
 """
 import os
 import unittest
@@ -230,7 +220,7 @@ class TestBase_save_to_file(unittest.TestCase):
 
 
 class TestBase_from_json_string(unittest.TestCase):
-    """Unittests for testing from_json_string method of Base class."""
+    """Unittests for testing from_json_string """
 
     def test_from_json_string_type(self):
         list_input = [{"id": 89, "width": 10, "height": 4}]
@@ -284,7 +274,7 @@ class TestBase_from_json_string(unittest.TestCase):
 
 
 class TestBase_create(unittest.TestCase):
-    """Unittests for testing create method of Base class."""
+    """Unittests for testing create method"""
 
     def test_create_rectangle_original(self):
         r1 = Rectangle(3, 5, 1, 2, 7)
@@ -336,11 +326,11 @@ class TestBase_create(unittest.TestCase):
 
 
 class TestBase_load_from_file(unittest.TestCase):
-    """Unittests for testing load_from_file_method of Base class."""
+    """Unittests for testing"""
 
     @classmethod
     def tearDown(self):
-        """Delete any created files."""
+        """Delete created files."""
         try:
             os.remove("Rectangle.json")
         except IOError:
@@ -402,11 +392,11 @@ class TestBase_load_from_file(unittest.TestCase):
 
 
 class TestBase_save_to_file_csv(unittest.TestCase):
-    """Unittests for testing save_to_file_csv method of Base class."""
+    """Unittests for testing save_to_file_csv """
 
     @classmethod
     def tearDown(self):
-        """Delete any created files."""
+        """Delete  created files."""
         try:
             os.remove("Rectangle.csv")
         except IOError:
@@ -480,11 +470,11 @@ class TestBase_save_to_file_csv(unittest.TestCase):
 
 
 class TestBase_load_from_file_csv(unittest.TestCase):
-    """Unittests for testing load_from_file_csv method of Base class."""
+    """Unittests for testing load_from_file_csv """
 
     @classmethod
     def tearDown(self):
-        """Delete any created files."""
+        """delete created files."""
         try:
             os.remove("Rectangle.csv")
         except IOError:
