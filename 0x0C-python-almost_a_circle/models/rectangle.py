@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """importing the base"""
 from models.base import Base
-"""defining the class"""
 
 
 class Rectangle(Base):
     """representing the class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """the new rectangle."""
         super().__init__(id)
