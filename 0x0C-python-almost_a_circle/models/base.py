@@ -56,13 +56,13 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        '''Loads string from file and unjsonifies.'''
+        '''loading string from json file'''
         from os import path
         file = "{}.json".format(cls.__name__)
         if not path.isfile(file):
             return []
-        with open(file, "r", encoding="utf-8") as f:
-            return [cls.create(**d) for d in cls.from_json_string(f.read())]
+        with open(file, "r", encoding="utf-8") as fl:
+            return [cls.create(**d) for d in cls.from_json_string(fl.read())]
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
