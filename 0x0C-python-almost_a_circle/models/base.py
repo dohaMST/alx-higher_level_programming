@@ -66,7 +66,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        '''Saves object to csv file.'''
+        '''saving to csv file.'''
         from models.rectangle import Rectangle
         from models.square import Square
         if list_objs is not None:
