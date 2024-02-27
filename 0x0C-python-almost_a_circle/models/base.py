@@ -2,6 +2,7 @@
 '''defining the class'''
 from json import dumps, loads
 import csv
+import turtle
 
 
 class Base:
@@ -103,26 +104,32 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        import turtle
-        import time
-        from random import randrange
-        turtle.Screen().colormode(255)
-        for i in list_rectangles + list_squares:
-            t = turtle.Turtle()
-            t.color((randrange(255), randrange(255), randrange(255)))
-            t.pensize(1)
-            t.penup()
-            t.pendown()
-            t.setpos((i.x + t.pos()[0], i.y - t.pos()[1]))
-            t.pensize(10)
-            t.forward(i.width)
-            t.left(90)
-            t.forward(i.height)
-            t.left(90)
-            t.forward(i.width)
-            t.left(90)
-            t.forward(i.height)
-            t.left(90)
-            t.end_fill()
-
-        time.sleep(5)
+        """ drawing: """
+        turt = turtle.Turtle()
+        turt.screen.bgcolor("#F1F1F1")
+        turt.pensize(4)
+        turt.shape("turtle")
+        for rect in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rect.x, rect.y)
+            turt.down()
+            for _ in range(2):
+                turt.forward(rect.width)
+                turt.left(90)
+                turt.forward(rect.height)
+                turt.left(90)
+            turt.hideturtle()
+        turt.color("#171717")
+        for sq in list_squares:
+            turt.showturtle()
+            turt.up()
+            turt.goto(sq.x, sq.y)
+            turt.down()
+            for x in range(2):
+                turt.forward(sq.width)
+                turt.left(90)
+                turt.forward(sq.height)
+                turt.left(90)
+            turt.hideturtle()
+        turtle.exitonclick()
