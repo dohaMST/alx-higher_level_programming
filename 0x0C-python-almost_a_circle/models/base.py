@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """defining the class"""
 import csv
-from json import dumps, loads
+import json
 #import turtle
 
 
